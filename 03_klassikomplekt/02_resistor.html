@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="02_resistor.js"></script>
+    <script>
+        // This variable will store our first resistor object
+        let r1;
+        // This function runs when the page finishes loading
+        function startPage(){
+        // The browser automatically gives us an object called "document".
+        // "document" represents the entire webpage.
+
+        // We ask the webpage:
+        // "Find the element whose id is 'canvas1'."
+        // That element is our drawing area.
+        const canvas=document.getElementById("canvas1");
+        // Now we ask the canvas:
+        // "Give me your 2D drawing tool."
+        // The canvas itself cannot draw.
+        // It gives us a drawing tool called a 2D context.
+        const ctx=canvas.getContext("2d");
+
+        // 120 = resistance value
+        // ctx = drawing tool
+        // 250 = starting horizontal position
+        // 350 = ending horizontal position
+        // 100 = vertical position
+        r1=new Resistor1(120, ctx, 250, 350, 100);
+
+        // Here we create a second resistor.
+        // It is drawn lower on the screen (y = 200).
+        //we dont save it in a variable so wecan access it.but still it runs
+        new Resistor1(140, ctx, 250, 350, 200); 
+    }   
+    </script>
+</head>
+<!-- When the page is fully loaded, startPage() runs automatically -->
+<body onload="startPage()">
+    <!-- This is the drawing area.
+    JavaScript will draw resistors inside this box. -->
+    <canvas id="canvas1" width="400" height="300"></canvas>
+</body >
+</html>

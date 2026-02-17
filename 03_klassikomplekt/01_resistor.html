@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- This loads our JavaScript file that contains the Resistor class -->
+    <script src="01_resistor.js"></script>
+    <script>
+        // This variable will store our resistor object
+        let r1;
+        // This function runs when the page finishes loading
+        function startPage(){
+            // We are telling JavaScript to find the canvas so we can draw on it.
+            let canvas=document.getElementById("canvas1");
+            // Get the 2D drawing tool from the canvas
+            // This tool allows us to draw shapes and text
+            let ctx=canvas.getContext("2d");
+
+            // Create a new Resistor object
+            // 110 is the resistance value
+            // ctx is the drawing tool
+            r1=new Resistor(110, ctx);
+        }
+    </script>
+</head>
+<!-- When the page loads, call startPage() -->
+<body onload="startPage()">
+    <!-- This is the canvas area where the resistor will be drawn -->
+    <canvas id="canvas1" width="400" height="300"></canvas> 
+    
+</body>
+</html>
