@@ -1,4 +1,6 @@
 // This class represents one resistor that can draw itself on the screen
+//A resistor is a two-terminal, passive electronic component that restricts or limits the 
+// flow of electrical current in a circuit.
 class Resistor {
 
     // This variable will store the resistance value (for example: 110 ohms)

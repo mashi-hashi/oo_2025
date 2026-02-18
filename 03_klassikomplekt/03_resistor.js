@@ -22,7 +22,7 @@ var Resistor2 = /** @class */ (function () {
     }
     // This method draws the resistor symbol
     Resistor2.prototype.draw = function () {
-        //this.g.clearRect(this.startx, this.y-this.height/2, this.width, this.height);
+        this.g.clearRect(this.startx, this.y - this.height / 2, this.width, this.height);
         // -----------------------------
         // 1️⃣ Draw the LEFT wire
         // -----------------------------

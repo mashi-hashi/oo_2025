@@ -1,4 +1,6 @@
 // This class represents one resistor that can draw itself on the screen
+//A resistor is a two-terminal, passive electronic component that restricts or limits the 
+// flow of electrical current in a circuit.
 var Resistor = /** @class */ (function () {
     // The constructor runs automatically when we create a new Resistor
     // It receives:
